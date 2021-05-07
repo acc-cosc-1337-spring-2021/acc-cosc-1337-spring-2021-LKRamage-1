@@ -13,7 +13,7 @@ int main()
 	string player;
 	int position;
 
-	cout<<"Ready to play tic tac toe? To start, type either X or O to claim your marker: ";
+	cout<<"Let's Play Tic-Tac-Toe: Type either X or O to for your marker: ";
 	cin>>player;
 
 	game.start_game(player);
@@ -21,7 +21,7 @@ int main()
 
 	do
 	{
-		cout<<"Player "<<game.get_player()<<" select a spot 1-9 to place your marker. \nType '10' if you'd like to close the board: ";
+		cout<<"Player "<<game.get_player()<<" Choose from spots 1-9 to place your marker on the board! \nJust type '10' if you wish to close the board, ending the game: ";
 		cin>>position;
 		game.mark_board(position);
 		game.display_board();

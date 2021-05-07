@@ -53,7 +53,7 @@ void Game::display_board() const
     {
         cout<< i + 1;
         cout<<" "<<pegs[i];
-        cout<<"_____"<<" |";
+        cout<<"     "<<" |";
         if((i + 1) % 3 == 0)
         {
             cout<< "\n";
