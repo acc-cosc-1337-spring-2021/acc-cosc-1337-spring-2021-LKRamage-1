@@ -4,7 +4,7 @@
 
 using std::cout;
 
-void Game::clear_board()
+void game::clear_board()
 {
     for(std::size_t i=0; i < pegs.size(); ++i)
     {
@@ -13,7 +13,7 @@ void Game::clear_board()
 
 }
 
-bool Game::check_board_full()
+bool game::check_board_full()
 {
     bool is_full = true;
     for(std::size_t i=0; i < pegs.size(); ++i)
@@ -26,13 +26,13 @@ bool Game::check_board_full()
     return is_full;
 }
 
-void Game::start_game(string first_player)
+void game::start_game(string first_player)
 {
     player = first_player;
     this -> clear_board();
 }
 
-void Game::set_next_player()
+void game::set_next_player()
 {
     if(player == "X")
         player = 'O';
@@ -40,14 +40,14 @@ void Game::set_next_player()
         player = "X";
 }
 
-void Game::mark_board(int position)
+void game::mark_board(int position)
 {
     pegs[position - 1] = this ->player;
 
     this -> set_next_player();
 }
 
-void Game::display_board() const 
+void game::display_board() const 
 {
     for (int i = 0; i < 9; ++i)
     {
@@ -61,7 +61,7 @@ void Game::display_board() const
     }
 } 
 
-void Game::set_winner()
+void game::set_winner()
 {
     if(player == "O")
     {
@@ -73,7 +73,7 @@ void Game::set_winner()
     }
 }
 
-bool Game::game_over()
+bool game::game_over()
 {
     bool column_winner = this -> check_column_win();
     bool row_winner = this -> check_row_win();
@@ -96,7 +96,7 @@ bool Game::game_over()
     return false;
 }
 
-bool Game::check_diagonal_win()
+bool game::check_diagonal_win()
 {
     bool win = false;
 
@@ -125,7 +125,7 @@ bool Game::check_diagonal_win()
     return win;
 }
 
-bool Game::check_column_win()
+bool game::check_column_win()
 {
     bool win = false;
 
@@ -165,7 +165,7 @@ bool Game::check_column_win()
     return win;
 }
 
-bool Game::check_row_win()
+bool game::check_row_win()
 {
     bool win = false;
 
