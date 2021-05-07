@@ -6,7 +6,8 @@ using std::cout;
 
 void Game::clear_board()
 {
-    for(std::size_t i=0; i < pegs.size(); ++i){
+    for(std::size_t i=0; i < pegs.size(); ++i)
+    {
         pegs [i] == " ";
     }
 
@@ -15,7 +16,8 @@ void Game::clear_board()
 bool Game::check_board_full()
 {
     bool is_full = true;
-    for(std::size_t i=0; i < pegs.size(); ++i){
+    for(std::size_t i=0; i < pegs.size(); ++i)
+    {
         if (pegs[i] == " "){
             is_full = false;
             break;

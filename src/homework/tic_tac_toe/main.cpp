@@ -26,6 +26,7 @@ int main()
 		game.mark_board(position);
 		game.display_board();
 
-	}while(position != 10);
+	}
+	while(position != 10);
 	return 0;
 } 
