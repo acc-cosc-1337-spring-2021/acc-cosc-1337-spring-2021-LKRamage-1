@@ -12,11 +12,7 @@ class game
         void mark_board(int position);
         string get_player()const{return player;}
         void display_board()const;
-        string get_winner()
-        {
-            return winner;
-        }
-
+        string get_winner()const{return winner;}
 
     private:
         vector<string> pegs {9, ""};
