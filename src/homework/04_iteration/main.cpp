@@ -49,9 +49,9 @@ int main() {
         else if (option == 2) {
 
 
-            string complement = get_dna_complement(dna);
+            string new_reversed = get_dna_complement(dna);
 
-            cout << "Complement: " << complement << endl;
+            cout << "Complement: " << new_reversed << endl;
 
         }
 

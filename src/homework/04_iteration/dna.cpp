@@ -15,7 +15,8 @@ double get_gc_content(const string &dna)
 
     int i = 0;
 
-    while(dna[i] != '\0') {
+    while(dna[i] != '\0') 
+    {
 
         if (dna[i] == 'G' || dna[i] == 'C') 
         {
@@ -98,7 +99,7 @@ string get_dna_complement(string dna)
 
         }
 
-        else if(b[i] == 'G') 
+        else if(reversed_string[i] == 'G') 
         {
 
             new_reversed[i] = 'C';

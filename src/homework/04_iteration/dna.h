@@ -17,4 +17,4 @@ string get_reverse_string(string dna);
 Write prototype for function get_dna_complement that
 accepts a string and returns a string
 */
-string get_reverse_string(string dna);
+string get_dna_complement(string dna);
