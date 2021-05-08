@@ -1,7 +1,5 @@
 //cpp
 
-//void 
-
 #include "tic_tac_toe_manager.h"
 
 #include <iostream>
