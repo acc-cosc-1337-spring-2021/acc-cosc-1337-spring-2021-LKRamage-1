@@ -1,3 +1,4 @@
+// Tic_Tac_Toe Main Version 1 (2nd April 2021)
 #include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
 #include "tic_tac_toe_3.h"
@@ -15,6 +16,9 @@ using std::cin;
 using std::unique_ptr;
 using std::make_unique;
 
+
+//TicTacToeData data;
+//TicTacToeManager manager = TicTacToeManager(data);
 
 int main()
 {
@@ -34,7 +38,8 @@ int main()
 	
 	while(option == "Y" || option == "y")
 	{
-		cout << "Enter 1 for 3x3 or 2 for 4x4." <<"\n";
+		cout << "\n\n";
+		cout << "Enter 1 for 3x3 or 2 for 4x4." <<"\n\n";
 		cout << "Select 1 or 2 for Game Type: ";
 		cin >> type;
 
@@ -47,7 +52,7 @@ int main()
 			Game = make_unique<TicTacToe4>();
 		}
 		
-		cout << "Please enter as player X or O ? (CAPITAL LETTERS)\n";
+		cout <<"\n" << "Please enter as player X or O ? (CAPITAL LETTERS)\n";
 		cin >> question;
 		cout <<"\n" << "You have enetered: ";
 		cout << question <<"\n";
@@ -76,7 +81,7 @@ int main()
 		{
 			cout <<"\n" << "Winner is " <<Game->get_winner() <<"!" <<"\n";
 			manager.save_game(Game);
-			manager.get_winner_total(o,x,t);
+			manager.get_winner_total(x,o,t);
 			cout <<"X Score: " << x <<"\n";
 			cout <<"O Score: " << o <<"\n";
 			cout <<"Ties: " << t <<"\n";
@@ -86,7 +91,7 @@ int main()
 			cout  <<"\n" << "It's a DRAW/TIE!" <<"\n";
 			cout << "Winner is " <<Game->get_winner() <<"!" <<"\n";
 			manager.save_game(Game);
-			manager.get_winner_total(o,x,t);
+			manager.get_winner_total(x,o,t);
 			
 			cout <<"\n" <<"X Score: " << x <<"\n";
 			cout <<"O Score: " << o <<"\n";
@@ -109,7 +114,7 @@ int main()
 	cout <<"O Score: " << o <<"\n";
 	cout <<"Ties: " << t <<"\n";
 	*/
-	//cout << manager;
+	cout << manager;
 	
 	return 0;
 		
