@@ -1,63 +1,55 @@
+#include<iostream>
+#include<string>
+#include<vector>
 
 #include "tic_tac_toe.h"
-#include <iostream>
 
-using std::cin;
-using std::cout;
 using std::string;
+using std::cout;
+using std::cin;
 
 int main() 
+{
+	// new
+	string winner;
+	char option ='Y';
 
-{	
-	game TicTacToeGame;
-	string player;
-	string again;
+	string question ="X";
 	int position;
-
-while(again == "Y" or 'y')
-	{
-		cout<<"Tic-Tac-Toe Game: Type X or O to choose your marker: ";
-		cin>>player;
-
-		while (player != "X" or player != "O")
-		{
-			cout<<"Select the player that will go first! Choose X or O: ";
-			cin>>player;
-			if (player == "X" or player == "O")
-			{
-				break;
-			}
-		}
-
-		TicTacToeGame.start_game(player);
-		TicTacToeGame.display_board();
-
-		while(TicTacToeGame.game_over() == false)
-		{
-			cout<<"Player "<<TicTacToeGame.get_player()<<", Pick a position (1-9): ";
-			cin>>position;
-			
-			while(position < 1 or position > 9)
-			{
-				cout<<"Oops, that position does not exist! Try again: ";
-				cin>>position;
-			}
-			
-			TicTacToeGame.mark_board(position);
-			TicTacToeGame.display_board();
-		}
 	
-	if(TicTacToeGame.get_winner() == "C")
-	{
-		cout<<"Tie Game";
-	}
+do {
+    TicTacToe Game;
+	cout <<"\n" <<"Welcome to TicTacToe" <<"\n\n\n";
+	do {
+	    // Prompt the user for the first player.
+	    cout <<"Enter x or as o?\n";
+	    cin >> question;
+	    cout <<"\n";
+	} while (question != "X" && question != "x" && question != "o" && question != "O");
+	Game.start_game(question);
+	cout <<"\n";
+	Game.display_board();
+	cout<<"\n";
 	
-	else
-		cout<<"Player "<<TicTacToeGame.get_winner()<<" has is the winner!\n";
+	do
+	{	
+		cout <<Game.get_player()<<"'s turn." <<"\n";
+		cout <<"Enter position from 1 to 9." <<"\n";
+		cout <<"Number picked: ";
+		cin >> position;
+		cout << "\n";
+		Game.mark_board(position);
+		Game.display_board();
+		cout << "\n";
+	}while(Game.game_over() == false);
+	
+	cout <<"Game Over... " <<"\n\n\n";
+	cout <<"AND THE WINNER IS " << Game.get_winner() <<" !!!" <<"\n\n\n";
+	cout <<"Would you like to play another round ?" <<"\n\n";
+	cout <<"Enter the following (y/n): ";
+	cin >> option;
+	cout <<"\n";
+} while (option == 'Y' || option == 'y');
 
-		cout<<"Play again? Enter Y to continue: ";
-		cin>>again;
-	}
-	
 	return 0;
 }
