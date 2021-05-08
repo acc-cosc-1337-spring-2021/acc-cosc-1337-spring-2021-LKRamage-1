@@ -33,6 +33,7 @@ TEST_CASE("Test game is over if 9 slots are selected.")
 	REQUIRE (TicTacToeGame.game_over() == false);
 	TicTacToeGame.mark_board(8);
 	REQUIRE (TicTacToeGame.game_over() == true);
+
 	REQUIRE (TicTacToeGame.get_winner() == "C");
 
 }
