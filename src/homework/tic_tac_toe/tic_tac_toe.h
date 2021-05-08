@@ -1,6 +1,10 @@
 //h
 #include <vector>
 #include <string>
+#include <iostream>
+
+#ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
 
 using std::string; using std::vector;
 
